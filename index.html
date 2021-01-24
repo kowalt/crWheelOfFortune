@@ -46,21 +46,24 @@
         {'fillStyle': '#F2F0A8', 'text': 'Bobo'},
         {'fillStyle': '#519142', 'text': 'Lukasz Ch.'},
         {'fillStyle': '#B7F7A8', 'text': 'Patryk'},
-        {'fillStyle': '#4B898F', 'text': 'Seba'}
-
+        {'fillStyle': '#4B898F', 'text': 'Seba'},
+        {'fillStyle': '#a04a63', 'text': 'Lukasz K.'},
+        {'fillStyle': '#75a25e', 'text': 'Krzysiek'},
+        {'fillStyle': '#8b9fca', 'text': 'Kuba'}
         ];
 
     let innerWheel = new Winwheel({
         'numSegments' : segments.length,
-        'outerRadius' : 110,
+        'outerRadius' : 100,
         'segments': segments,
+        'textFontSize': 11
     });
 
     let outerWheel = new Winwheel({
         'numSegments': segments.length,
         'textMargin' : 0,
         'outerRadius' : 210,
-        'innerRadius' : 110,
+        'innerRadius' : 100,
         'segments': segments,
         'animation':
             {
@@ -84,8 +87,6 @@
 
     function afterFinish()
     {
-        alert('Do roboty!');
-
         wheelSpinning = false;
 
         document.getElementById('pw1').className = "";
