@@ -46,7 +46,9 @@
         {'fillStyle': '#F2F0A8', 'text': 'Bobo'},
         {'fillStyle': '#519142', 'text': 'Lukasz Ch.'},
         {'fillStyle': '#B7F7A8', 'text': 'Patryk'},
-        {'fillStyle': '#4B898F', 'text': 'Seba'}];
+        {'fillStyle': '#4B898F', 'text': 'Seba'}
+
+        ];
 
     let innerWheel = new Winwheel({
         'numSegments' : segments.length,
@@ -130,14 +132,19 @@
             innerWheel.rotationAngle = 0;
             innerWheel.draw(false);
 
-            if (wheelPower == 1) {
+            switch (wheelPower) {
+            case 1:
                 outerWheel.animation.spins = 3;
                 outerWheel.animation.duration = 7;
-            } else if (wheelPower == 2) {
+                break;
+            case 2:
                 outerWheel.animation.spins = 8;
-                outerWheel.animation.duration = 7;
-            } else if (wheelPower == 3) {
+                outerWheel.animation.duration = 10;
+                break;
+            case 3:
                 outerWheel.animation.spins = 15;
+                outerWheel.animation.duration = 22;
+                break;
             }
 
             document.getElementById('spin_button').src       = "spin_off.png";
